@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="gener.js"></script>
+    <title>Сервитор - генератор паролей</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf8" />
+
+</head>
+
+
+<body>
+
+
+<div id = "MobVer"> 
+<div style = "color: white; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+<h2 style = "font-size: 15px;">Идет <span style = "color:#16A9CA">разработка</span> мобильного <span style = "color:#16A9CA">приложения</span> <span style = "color:#16A9CA">«Сервитор»</span>. Спасибо что остаетесь с нами <i style = "color:#16A9CA" class="fa fa-heart"></i> <br><br> Следите за нами через <a style = "color:#16A9CA" href="https://t.me/Servitor_password_master_bot"><span style = "color:#16A9CA">Telegram</span></a> бота. </h2>
+</div>
+</div>
+
+<div id = "NoMobVer">
+<button onclick = "GenerOn()" id = "gener_butOn"> <i style = "font-size: 20px;" class="fa fa-bars"> </i></button>
+
+
+<div id = "gener" > 
+<div id = "gener_content" >
+	<button onclick = "GenerOff()" id = "gener_butOff">X</button>
+	<div id = "gener_block_empty">
+	
+		<div class = "generblock" > 
+		<h3 class = "gb_header" >Генератор</h3> 
+	
+		<input type="text" id = "g_password" class = "gb_inputtext"  placeholder="Вывод пароля" value = "" readonly>
+		
+			<div style = "background-color: #212121; margin-top: 25px; width: 100%; height: 330px; padding-top: 1px;">
+			
+				<h4 class = "gb_header2" >Настройка:</h4>
+			 
+				<div style = " margin-top: -20px;  margin-left: 30px;">
+					<h5 style = "color: white; display: inline-block;  font-size: 20px;">Длина пароля: </h5>
+					<input id = "passwordLength" class = "gb_inputnumber" type="number"  min="0" max="20" value = "10">
+				</div>
+					
+				<div style = "margin-left: 30px; //background-color: red; ">
+					<label for="checkboxG1" class="css-label"> <p style = "color: white; display: inline-block; margin-top: -12px;  font-size: 20px; font-weight: bold; ">Использование цифр</p> </label> <input type="checkbox" id="checkbox_number" class="css-checkbox" checked = "true" /input> <br>
+					<label for="checkboxG1" class="css-label"> <p style = "color: white; display: inline-block; margin-top: -12px;  font-size: 20px; font-weight: bold;">Использование букв</p> </label> <input type="checkbox" id="checkbox_letters" class="css-checkbox" checked = "true" /input> <br>
+					<label for="checkboxG1" class="css-label"> <p style = "color: white; display: inline-block; margin-top: -12px;  font-size: 20px; font-weight: bold;">Использование спецсимволов</p> </label> <input type="checkbox" id="checkbox_special" class="css-checkbox" checked = "true" /input>
+				</div>
+				
+			</div>
+			
+			<button id = "g_button" class = "gb_button" onclick = "PasswordCreate()" ><b>Сгенерировать</b></button>
+			
+		</div>
+		
+		
+		
+	
+	
+	
+		<div class = "generblock" >
+		<h3 class = "gb_header" >Проверка</h3> 
+		
+		<input type="text" id = "p_password" class = "gb_inputtext" placeholder="Введите пароль для проверки" value = "">
+	
+		<div style = "background-color: #212121; margin-top: 25px; width: 100%; height: 330px; padding-top: 1px;">
+				<h4 class = "gb_header2" >Вывод:</h4>
+			 
+				<div style = "margin-left: 30px; //background-color: red; ">
+					<p style = "color: white; display: inline-block; margin-top: -12px;  font-size: 20px; font-weight: bold; ">Кол-во симв: <span id = "passwordLenth" >null</span> </p> <br>
+					<p style = "color: white; display: inline-block; margin-top: -12px;  font-size: 20px; font-weight: bold;">Системная оценка: <span id = "passwordRating" >null</span> </p> <br>
+					<p style = "color: white; display: inline-block; margin-top: -12px;  font-size: 20px; font-weight: bold;">Результат в проц: <span id = "passwordProcent" >null</span> </p> <br>
+					<p style = "color: white; display: inline-block; margin-top: -12px;  font-size: 20px; font-weight: bold;">Оценка: <span id = "passwordO" >null</span> </p> <br>
+				</div>
+				
+		</div>
+	
+		<button id = "b_button" class = "gb_button" onclick = "PasswordCheck()"  ><b>Проверить</b></button>
+	</div>
+	
+	
+	</div>
+</div>
+	
+	
+</div>
+
+
+
+<header>
+
+
+	<h1 id="logo">Сервитор</h1>
+	
+
+</header>
+
+
+<div id = "content_1" >
+<h2 style = "margin: 0;" id = "content_1_head">Что такое «Сервитор»?</h2>
+<h3 style = " text-align: center; ">«Сервитор» - это веб-приложение которое служит для генерации и проверки ваших паролей.<br> Разработчики «Серветор» гарантируют надежность и практичность наших символьных продуктов. </h3>
+<h2 id = "content_1_head">Как этим пользоваться?</h2>
+<h3 style = " text-align: center; ">В правом нижнем углу экрана есть кнопка «<i class="fa fa-bars"></i>» при щелчке на которую открывается окно со всеми необходимыми инструментами. </h3>
+</div>
+
+
+
+
+<div id = "content_2" >
+
+	<div class = "c2_block" >
+<a href="index.html#alg">	<img class = "blockimg" style = "transition: transform 0.5s;" src="icons\algor.png"  width="270" height="270"> </a>
+		<div class = "textdiv" style = " position: relative; width: 100%; height: 50px; background-color: #16A9CA; transition: margin-top 0.15s;">
+			<h3 style = "display: flex; justify-content: center; align-items: center; color: white; margin: auto;  font-size: 27px;" > Алгоритм </h3>
+		</div>
+	</div>
+	
+	<div class = "c2_block" >
+<a href="index.html#onas">	<img class = "blockimg" style = "transition: transform 0.5s;" src="icons\onas.png"  width="270" height="270"> </a>
+		<div class = "textdiv" style = " position: relative; width: 100%; height: 50px; background-color: #16A9CA; transition: margin-top 0.15s;">
+			<h3 style = "display: flex; justify-content: center; align-items: center; color: white; margin: auto;  font-size: 27px;" > О нас </h3>
+		</div>
+	</div>
+
+	<div class = "c2_block" >
+<a href="index.html#svz">	<img class = "blockimg" style = "transition: transform 0.5s;" src="icons\svyaz.png"  width="270" height="270"> </a>
+		<div class = "textdiv" style = " position: relative; width: 100%; height: 50px; background-color: #16A9CA; transition: margin-top 0.15s;">
+			<h3 style = "display: flex; justify-content: center; align-items: center; color: white; margin: auto;  font-size: 27px;" > Связь </h3>
+		</div>
+	</div>
+	
+	<div class = "c2_block" >
+<a href="https://t.me/Servitor_password_master_bot">	<img class = "blockimg" style = "transition: transform 0.5s;" src="icons\tg.png" alt="Forest" width="270" height="270"> </a>
+		<div class = "textdiv" style = " position: relative; width: 100%; height: 50px; background-color: #16A9CA; transition: margin-top 0.15s;">
+			<h3 style = "display: flex; justify-content: center; align-items: center; color: white; margin: auto;  font-size: 27px;" > Наш бот </h3>
+		</div>
+	</div>
+	
+</div>
+
+
+<div style = " height: 70px; margin-top: 100px; " >
+ <h2 style = "color: #16A9CA; text-align: center; font-size: 60px;">Немного о паролях</h2>
+</div>
+
+<div id = "content_3">
+
+ <div id = "content_3_blocks">
+	<div id = "content_3_text">
+		<h2 style = "color: white; text-align: left; font-size: 45px;">История</h2>
+         <h3>Пароли использовались с древнейших времён.<br><br>
+		 Пароли использовались в компьютерах с первых их дней. Например, CTSS от MIT, появившаяся в 1961 году, была одна из первых открытых систем. Она использовала команду LOGIN для запроса пароля пользователя.<br><br>
+		 Роберт Моррис предложил идею хранения паролей в хеш-форме для операционной системы UNIX. Его алгоритм, известный как crypt, использует 12-битный salt и связывается для изменения формы с алгоритмом DES, снижая риск перебора по словарю.<br><br>Пользователи по логину и паролю проходят аутентификацию в процессе входа с контролем доступа к защищённым операционным системам, мобильным телефонам, приложениям и онлайн-сервисам. Пользователь компьютера зачастую имеет пароли для множества различных целей: вход в учётные записи; доступ к ящикам электронной почты, личным кабинетам на сайтах, в базах данных; для чтения новостей в платных изданиях. По результатам исследования компании NordPass, в 2019 году среднее количество паролей, используемых одним человеком, составляло 70-80 штук; за год это число выросло на 25% и приблизилось к 100 паролям.
+		 </h3>
+  </div>
+ </div>
+
+ <div id = "content_3_blocks">
+	<div  style = "margin-top: 50px;" id = "content_3_text">
+		<h2 style = "color: white; text-align: left; font-size: 45px;">Безопасность пароля пользователя</h2>
+         <h3>Исследования показывают, что около 40 % всех пользователей выбирают пароли, которые легко угадать автоматически. Легко угадываемые пароли (123, admin) считаются слабыми и уязвимыми. Пароли, которые очень трудно или почти невозможно угадать, считаются более стойкими. Некоторыми источниками рекомендуется использовать пароли, генерируемые на стойких хешах типа MD5, SHA-1 от обычных псевдослучайных последовательностей, по алгоритмам вида.<br><br>
+		 В конце 2017 года корпорация SplashData опубликовала 100 самых ненадежных паролей года. Первое место, уже четвёртый год подряд, занимает пароль — 123456. Его используют около 17 % пользователей сети Интернет.<br><br>
+		 В 2013 году компания Google опубликовала список широко используемых категорий паролей, которые считаются слишком ненадёжными из-за того, что их легко подобрать (особенно после изучения профиля персоны в социальной сети).
+		</h3>
+  </div>
+</div>
+
+
+
+</div>
+
+<div style = " height: 50px; margin: 0;" >
+ 
+</div>
+
+
+
+
+<div style = "background-image: url('https://media.kingston.com/kingston/hero/ktc-hero-solutions-data-security-who-is-responsible-for-cyber-security-lg.jpg');
+background-repeat: no-repeat;
+background-position: center top;
+background-attachment: fixed;
+background-size: cover; height: 500px; margin-top: 100px;"> </div>
+
+<div  id ="alg"> </div>
+<div style = " height: 50px; margin-top: 70px;">
+ <h2 style = "color: #EDDC13; text-align: center; font-size: 60px;">Алгоритм</h2>
+</div>
+
+<div id = "content_4" >
+<div style = "height: 100%; width: 90%; margin: auto;">
+<h2 style = "margin: 0; text-align: left;" id = "content_1_head">Как это работает изнутри?</h2>
+<h3 style = " text-align: left; ">
+Генератор случайных паролей «Сервитор» сделает защиту учетной записи элементарной задачей. Мгновенно создавать надежные случайные пароли можно на этой странице. Вот как это работает.
+Вы можете выбрать желаемую длину и символы для создания невзламываемого случайного пароля. Используя инструмент «Серветор», вы можете выбрать заранее установленные или собственные параметры для создания случайной комбинации и скопировать ее в буфер обмена. Так вы повысите уровень безопасности всех своих учетных записей в Интернете.
+Автоматический генератор паролей «Серветор» создает разнообразные сочетания букв нижнего и верхнего регистров, а также цифр и специальных символов для создания непредсказуемых случайных комбинаций.
+ </h3>
+</div>
+</div>
+
+<div id = "content_4" >
+<div style = "height: 100%; width: 90%; margin: auto;">
+<h2 style = "margin: 0; text-align: left;" id = "content_1_head">Насколько это надежно?</h2>
+<h3 style = " text-align: left; ">
+Абсолютно! Генератор случайных паролей «Сервитор» использует алгоритмы математической энтропии для создания случайных комбинаций, состоящих из цифр, букв и символов. Символы, которые подбирает данный автоматический генератор паролей, абсолютно случайны и не передаются через Интернет. Таким образом, генератор создает максимально надежный пароль. Никто, даже «Серветор», не сможет увидеть ваш конфиденциальный личный пароль.
+ </h3>
+</div>
+</div>
+
+
+
+
+<div style = " height: 50px; margin: 0;" > </div>
+
+
+<div style = "background-image: url('https://cdn5.vedomosti.ru/image/2022/4y/1dh31u/original-1s4b.jpg');
+background-repeat: no-repeat;
+background-position: center top;
+background-attachment: fixed;
+background-size: cover; height: 500px; margin-top: 100px;"> </div>
+
+<div  id = "onas"> </div>
+
+<div style = " height: 50px; margin-top: 70px;">
+ <h2 style = "color: #EDDC13; text-align: center; font-size: 60px;">О «Сервитор»</h2>
+</div>
+
+<div id = "content_4" >
+<div style = "height: 100%; width: 90%; margin: auto;">
+<h2 style = "margin: 0; text-align: left;" id = "content_1_head">О сайте «Сервитор»</h2>
+<h3 style = " text-align: left; ">
+Генератор надежных паролей от «Сервитор»
+Люди не очень хорошо умеют придумывать уникальные или/и случайные пароли. Каждый раз, когда вы создаете какой-либо новый аккаунт, вам сложно придумывать уникальный случайный пароль? Это потому, что так оно и есть. Вот почему мы создали генератор надежных паролей, который будет генерировать надежные пароли за вас. 81% утечек данных происходят из-за использования слабых или повторно используемых паролей, поэтому случайные уникальные пароли — ваша лучшая защита от различных угроз онлайн.
+Неважно, какую учетную запись нужно обезопасить (игровую, банковскую, в социальной сети или электронной почте). «Серветор» предлагает удобный дизайн и возможность создать случайный пароль в мгновение ока.
+ </h3>
+</div>
+</div>
+
+<div id = "content_4" >
+<div style = "height: 100%; width: 90%; margin: auto;">
+<h2 style = "margin: 0; text-align: left;" id = "content_1_head">Команда</h2>
+<h3 style = " text-align: left; ">
+«Сервитор» — команда разработавшая генератор пароля. Штаб-квартира нашей команды находится в «МАДИ», г.Москва. Наш сайт используются миллионами людей по всему миру. Наши клиенты варьируются от индивидуальных пользователей и малых предприятий до государственных учреждений и ведущих компаний. 
+Наша миссия — предоставить отдельным лицам и компаниям возможность удобного сайта с генерацией безопасного и надёжного пароля.
+ </h3>
+</div>
+</div>
+
+
+
+
+<div style = " height: 50px; margin: 0;" > </div>
+
+
+<div style = "background-image: url('https://www.vizarti.ru/wp-content/uploads/2017/04/fd3654cd-42fb-4257-a0e8-fac41a6d4420_Contact.jpg');
+background-repeat: no-repeat;
+background-position: center top;
+background-attachment: fixed;
+background-size: cover; height: 500px; margin-top: 100px;"> </div>
+
+<div id = "svz" style = " height: 50px; margin-top: 70px; " >
+ <h2  style = "color: #EDDC13; text-align: center; font-size: 60px;">Связь</h2>
+</div>
+
+<div id = "content_svyaz" >
+
+  
+    <div class = "svyaz_block" onclick="window.open('https://vk.com/ardik_games','_blank');" >
+		<img class = "svyaz_img" style = " display: block; margin-left: auto; margin-right: auto; margin-top: 30px; border-radius: 50%; transition: all 0.15s; border: 2px solid white;"  src="https://avatarfiles.alphacoders.com/226/226407.jpg" alt="Forest" width="110" height="110">
+		<h3  style = "color: #EDDC13; text-align: center; font-size: 21px;">Даниил Демидов</h3>
+		<h4  style = "color: white; text-align: center; font-size: 16px; margin-top: -15px; ">Алгоритмы</h4>
+		<div style = "margin: auto; width: 100%; height: 185px; //background-color: red;">
+		<h5  style = "color: grey; margin: auto; font-size: 15px; margin-top: -15px; max-width: 90%; word-break:break-all; ">Написание алгоритмов для генератора паролей «Сервитор».<h5>
+		</div>
+		<h4  style = " color: white; margin-top: 10px; text-align: center; font-size: 15px; ">Кликни чтоб перейти в VK</h4>
+    </div>
+   
+   
+    <div class = "svyaz_block" onclick="window.open('https://vk.com/id559212548','_blank');" >
+		<img class = "svyaz_img" style = " display: block; margin-left: auto; margin-right: auto; margin-top: 30px; border-radius: 50%; transition: all 0.15s; border: 2px solid white;"  src="https://i.pinimg.com/originals/e3/18/b9/e318b964feb618b37808fd7aa81b51a4.jpg" alt="Forest" width="110" height="110">
+		<h3  style = "color: #EDDC13; text-align: center; font-size: 21px;">Сергей Сопко</h3>
+		<h4  style = "color: white; text-align: center; font-size: 16px; margin-top: -15px; ">Дизайнер</h4>
+		<div style = "margin: auto; width: 100%; height: 185px; //background-color: red;">
+		<h5  style = "color: grey; margin: auto; font-size: 15px; margin-top: -15px; max-width: 90%; word-break:break-all; ">Поиск материалов и написание<br>текста для визуальной составляющей сайта «Сервитор».<h5>
+		</div>	
+		<h4  style = " color: white; margin-top: 10px; text-align: center; font-size: 15px; ">Кликни чтоб перейти в VK</h4>
+    </div>
+
+
+    <div class = "svyaz_block" onclick="window.open('https://vk.com/andrew12211','_blank');" >
+		<img class = "svyaz_img" style = " display: block; margin-left: auto; margin-right: auto; margin-top: 30px; border-radius: 50%; transition: all 0.15s; border: 2px solid white;"  src="https://coolsen.ru/wp-content/uploads/2021/09/55.jpg" alt="Forest" width="110" height="110">
+		<h3  style = "color: #EDDC13; text-align: center; font-size: 21px;">Андрей Смирнов</h3>
+		<h4  style = "color: white; text-align: center; font-size: 16px; margin-top: -15px; ">Фронтенд</h4>
+		<div style = "margin: auto; width: 100%; height: 185px; //background-color: red;">
+		<h5  style = "color: grey; margin: auto; font-size: 15px; margin-top: -15px; max-width: 90%; word-break:break-all; ">Работает с клиентской частью<br>веб-ресурса, отвечает за внешний вид и гармоничное распределение всех элементов «Сервитор».<h5>
+		</div>
+		<h4  style = " color: white; margin-top: 10px; text-align: center; font-size: 15px; ">Кликни чтоб перейти в VK</h4>
+    </div>
+		
+		
+		<div class = "svyaz_block" onclick="window.open('https://vk.com/nukatron','_blank');" >
+		<img class = "svyaz_img" style = " display: block; margin-left: auto; margin-right: auto; margin-top: 30px; border-radius: 50%; transition: all 0.15s; border: 2px solid white;"  src="https://no-muggles.ru/wp-content/uploads/2018/08/waultboy-%D0%BF%D1%80%D0%B8%D0%BD%D1%82.jpg" alt="Forest" width="110" height="110">
+		<h3  style = "color: #EDDC13; text-align: center; font-size: 21px;">Степан Фарманян</h3>
+		<h4  style = "color: white; text-align: center; font-size: 16px; margin-top: -15px; ">Фронтенд</h4>
+		<div style = "margin: auto; width: 100%; height: 185px; //background-color: red;">
+		<h5  style = "color: grey; margin: auto; font-size: 15px; margin-top: -15px; max-width: 90%; word-break:break-all; ">Занимается непосредственным<br>программированием функционала сайта, «оживляет» компоненты<br>интерфейса «Сервитор».<h5>
+		</div>
+		<h4  style = " color: white; margin-top: 10px; text-align: center; font-size: 15px; ">Кликни чтоб перейти в VK</h4>
+    </div>
+  
+</div>
+
+
+
+<div style = " height: 50px; margin: 0;" > </div>
+</div>
+
+</body>
+</html>

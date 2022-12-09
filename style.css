@@ -1,0 +1,450 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #141414;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+    background: #555;//#16A9CA;
+	border-radius: 10px;
+}
+
+  
+html {
+  //overflow: hidden;
+  scroll-behavior: smooth;
+
+}
+
+body {
+background-color:#141414;
+
+margin: 0;
+font-family: "Open Sans";
+}
+
+#gener_butOn {
+	
+	position: absolute; 
+	position: fixed; 
+	z-index: 10; 
+	bottom: 0; 
+	right: 0;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border-style: solid;
+	
+	color: #212121;
+	background-color: #36daff;
+	border: 3px solid #212121;
+	transition: 0.15s;
+}
+
+#gener_butOn:hover {
+	
+	box-shadow: 0px 0px 30px -10px #16A9CA;	
+	cursor: pointer;
+	color: #212121;
+	background-color: #36daff;
+	transform: scale(0.95);
+}
+
+#gener {
+
+	//position: absolute; 
+	position: fixed; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+	z-index: 15; 
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(20px);
+   	transition: all 0.2s;
+	display: none;
+}
+
+#gener_content {
+
+	width: 1400px;
+	height: 800px;
+	background-color: #3d3d3d;
+	border-radius: 35px;
+
+	transition-duration: 0.4s;
+}
+
+
+#gener_butOff {
+	
+	z-index: 10; 
+
+	background-color: grey;
+	margin-left: 1348px;
+    margin-top: 17px;
+	
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border-style: solid;
+}
+
+
+
+#gener_block_empty {
+	
+	
+    overflow: hidden; 
+	display: flex; 
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	width: 1250px;
+	height: 700px;
+	//background-color: red;
+	
+	
+}
+
+
+
+.generblock {
+	
+	width: 550px; 
+	height: 670px; 
+	background-color: #282828;
+	border-radius: 25px;
+	overflow: hidden;
+}
+
+
+.gb_header {
+	
+	color: white; 
+	text-align: center; 
+	font-size: 30px;
+}
+
+.gb_inputtext {
+	
+	margin-left: 20px; 
+	width: 485px; 
+	height: 30px; 
+	padding: 10px; 
+	margin-top: 25px; 
+	font-size: 17px; 
+	border-radius: 30px;
+	transition: 0.15s;
+    //outline: none;
+	border: none;
+}
+
+::-moz-selection {
+    background-color: #36daff;
+    color: #fff;
+}
+::selection {
+    background-color: #36daff;
+    color: #fff;
+}
+
+.gb_inputtext:focus {
+    outline: 2px solid #36daff;
+	box-shadow: 0px 0px 30px -10px #16A9CA;	
+}
+
+
+.gb_inputnumber {
+	font-size: 15px; 
+	display: inline-block; 
+	width: 45px; 
+	height: 18px;
+	padding: 7px;
+	border-radius: 30px;
+	transition: 0.15s;
+    //outline: none;
+	border: none;
+
+}
+
+.gb_inputnumber:focus {
+	outline: 2px solid #36daff;
+}
+
+
+.gb_header2 {
+	
+color: white; 
+margin-left: 30px; 
+font-size: 25px;
+
+}
+
+.gb_button {
+	
+margin: 0 auto; 
+display: block; 
+padding: 10px; 
+width: 150px; 
+height: 50px; 
+font-size: 15px; 
+border-radius: 30px; 
+margin-top: 40px;
+color: #36daff;
+background-color: #212121;
+border: 3px solid #36daff;
+transition: 0.1s;
+}
+
+.gb_button:hover {
+box-shadow: 0px 0px 30px -10px #16A9CA;	
+cursor: pointer;
+color: #212121;
+background-color: #36daff;
+border: 3px solid #36daff;
+}
+
+
+header {
+width: 100%;
+height: 50px;
+background-color: #141414;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px -10px 30px 0px #36daff;
+z-index: 50;
+}
+
+#logo {
+//width: 200px;
+//height: 50px;
+margin: auto;
+color: white;
+
+
+text-align: center; 
+text-shadow: 0 0 4px #36daff, 0 0 4px #36daff;
+}
+
+
+
+#content_1 {
+//background-color: #1D5461; //#141414;
+background: linear-gradient(to right, #16A9CA , #36daff);
+
+
+
+  
+height: 450px;
+//box-shadow: 0px 0px 20px 0px #36daff;
+width: 1400px;
+margin: auto;
+margin-top: 70px; 
+border-radius: 35px;
+padding-top: 10px;
+overflow: hidden;
+}
+
+
+
+
+#content_1_head {
+//background-color: #0076fc; 
+color: white;
+text-align: center;
+//margin: 50px;
+font-size: 50px;
+//font-family: "Moderan", sans-serif;
+
+}
+
+
+#content_2 {
+//background-color: yellow; 
+
+
+
+background-image: url("https://media.kingston.com/kingston/hero/ktc-hero-blog-data-security-cybersecurity-threats-endpoint-security-challenges-2022-lg.jpg");
+background-repeat: no-repeat;
+background-position: center top;
+background-attachment: fixed;
+background-size: cover;
+
+ margin: auto; 
+ margin-top: 70px; 
+ height: 270px; 
+ 
+ overflow: hidden; 
+ display: flex; 
+ justify-content: space-around;
+ padding: 10px;
+ //border-radius: 20px;
+}
+
+.c2_block {
+	
+	display: block;  
+	overflow: hidden;  
+	width: 270px; 
+	height: 100%; 
+	background-color: #141414;
+	 border-radius: 20px;
+}
+.c2_block:hover .textdiv {
+	
+	  margin-top:-50px;
+}
+
+.c2_block:hover .blockimg {
+	
+	  transform: scale(1.2);
+}
+
+
+#content_3 {
+ //background: red;
+ width: 100%; 
+ //height: 1400px;
+overflow: hidden;
+margin: 0;
+margin-top: 100px;
+
+}
+
+#content_3_blocks{
+	background: linear-gradient(to right, #16A9CA , #36daff);
+	height: 600px;
+	//margin-top: 50px;
+
+} 
+
+
+#content_3_text {
+ margin: auto;  
+ height: 50%; 
+ width: 1400px;
+ overflow: visible;
+ padding: 10px;
+}
+
+
+
+#content_4 {
+//background-color: #1D5461; //#141414;
+background: linear-gradient(to right, #16A9CA , #36daff);
+
+
+  
+height: 450px;
+width: 1400px;
+margin: auto;
+margin-top: 100px; 
+border-radius: 35px;
+padding-top: 20px;
+overflow: hidden;
+}
+
+#content_svyaz{
+	
+	//background-color: red;
+	height: 600px; 
+	width: 1400px; 
+	margin: auto; 
+	margin-top: 40px; 
+	 
+	
+	 display: flex; 
+ justify-content: space-around;
+	
+}
+
+
+.svyaz_block {
+	
+	//display: block;  
+	overflow: hidden;  
+	width: 310px; 
+	height: 460px; 
+	background-color: #141414;
+	 border-radius: 25px;
+	 margin: auto; 
+	 transition: all 0.15s;
+	 border: 3px solid #16A9CA;
+}
+
+
+.svyaz_block:hover {
+	  cursor: pointer;
+	 box-shadow: 0px 0px 30px -10px #16A9CA;
+	   transform: scale(1.04);
+	   z-index: 5;
+}
+
+
+.svyaz_block:hover .svyaz_img {
+	
+	 //border: 3px solid #16A9CA;
+	   box-shadow: 0px 0px 20px -7px white; //#16A9CA;
+}
+
+
+/*
+#content_3 {
+ background: linear-gradient(to right, #16A9CA , #36daff);
+ margin: auto; 
+ margin-top: 50px; 
+ height: 1200px; 
+ width: 100%; 
+overflow: hidden;
+}
+
+#content_3_text {
+ //background: red;
+ margin: auto;  
+ height: 50%; 
+ width: 90%; 
+ overflow: visible;
+ padding: 10px;
+}
+*/
+#MobVer{
+
+	display: none
+}
+
+@media screen and (max-width: 850px) {
+
+body {
+	overflow: hidden;
+	
+}
+
+#MobVer{
+	display: block;
+	position: absolute;
+	z-index: 100;
+	width: 100%; 
+	height: 100%;
+	background-color:#141414;
+}
+
+
+#NoMobVer{
+	display: none;
+
+}
+
+
+}
