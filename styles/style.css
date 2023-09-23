@@ -50,7 +50,6 @@ body {
 
 .glow-on-hover {
 	display: flex;
-	
 	margin: auto;
 	margin-top: 80px;
 	
@@ -62,7 +61,7 @@ body {
 	
 	font-size: 23px;
 	font-weight: 600;
-
+	cursor: pointer;
 	color: #F6F6F6;
 	background-color: #1C1C1C;	
 	text-decoration: none;
