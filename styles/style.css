@@ -52,6 +52,7 @@ body {
 	display: flex;
 	margin: auto;
 	margin-top: 80px;
+	margin-bottom: 80px;
 	
 	justify-content: center;
 	align-items: center;
@@ -119,18 +120,6 @@ body {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
